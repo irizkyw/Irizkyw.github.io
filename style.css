@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: crimson;
+    overflow-x: hidden;
+    height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    position: relavtive;
+    font-size: 14vw;
+    color: crimson;
+    -webkit-text-stroke: 0.3vw peachpuff;
+    text-transform: uppercase;
+}
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    height: 35%;
+    -webkit-text-stroke: 0.3vw peachpuff;
+    color: rgb(247,134,172);
+    border-right: 2px solid palevioletred;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 33.5%;
+    }
+}
+@media only screen and (max-width: 600px){
+    h2{
+    -webkit-text-stroke: 0.3vw peachpuff;
+    color: crimson!important;
+
+    }
+    h2::before{
+        position: absolute;
+        color: rgb(247,134,172);
+        border-right: 2px solid palevioletred;    
+        height: 8%;
+    }
+}
