@@ -105,7 +105,7 @@ body {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    margin-left: 2em !important;
+    margin-left: 7.25em !important;
   }
   .text {
     padding: 0 20px;
