@@ -53,6 +53,6 @@ h2::before{
         position: absolute;
         color: rgb(247,134,172);
         border-right: 2px solid palevioletred;    
-        height: 8%;
+        height: 12%;
     }
 }
