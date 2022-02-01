@@ -87,6 +87,17 @@ body {
   animation: closeRight 2s ease-in-out forwards;
 }
 
+#card .text {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  margin: 0 auto;
+  position: absolute;
+  -webkit-transform: translateY(20rem);
+          transform: translateY(20rem);
+  opacity: 0;
+}
+
 #card:hover #heart1 {
   -webkit-animation: openLeft 2s ease-in-out forwards;
   animation: openLeft 2s ease-in-out  forwards;
@@ -96,6 +107,12 @@ body {
   -webkit-animation: openRight 2s ease-in-out forwards;
   -moz-animation: openRight 2s ease-in-out forwards;
   -ms-animation: openRight 2 ease-in-out  forwards;
+}
+
+#card:hover .text {
+  opacity: 1 !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @-webkit-keyframes closeLeft {
