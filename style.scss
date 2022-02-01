@@ -5,6 +5,7 @@ body
 {
   background-color:#ddd;
   font-family: 'Poiret One', Segoe UI Light, cursive;
+  overflow-x: hidden;
 }
 
 #card {
@@ -116,6 +117,7 @@ body
     -ms-animation:openRight 2 ease-in-out  forwards;
   }
   .text{
+    text-align: center;
     opacity: 1!important;
     transition: 0.5s;
   }

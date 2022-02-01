@@ -2,6 +2,7 @@
 body {
   background-color: #ddd;
   font-family: 'Poiret One', Segoe UI Light, cursive;
+  overflow-x: hidden;
 }
 
 #card {
@@ -110,6 +111,7 @@ body {
 }
 
 #card:hover .text {
+  text-align: center;
   opacity: 1 !important;
   -webkit-transition: 0.5s;
   transition: 0.5s;
