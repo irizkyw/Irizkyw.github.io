@@ -104,6 +104,11 @@ body
   }
 }
 
+@media only screen and (max-width: 600px) {
+  #card {
+    margin-left: -200px;
+  }
+}
 #card:hover {
   #heart1 {    
     -webkit-animation:openLeft 2s ease-in-out forwards ;
