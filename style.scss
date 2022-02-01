@@ -104,15 +104,15 @@ body
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 460px) {
   #card {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin-left: 0;
-    .text{
-      padding: 0 20px;
-    }
+    margin-left: 2em!important;
+  }
+  .text{
+    padding: 0 20px;
   }
 }
 #card:hover {
