@@ -101,7 +101,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   #card {
-    margin-left: 250px;
+    margin-left: 10%;
   }
 }
 
