@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
   <link href="assets/images/favicon.png" rel="icon" />
-  <title>Documentation | Go language</title>
+  <title>Summary | Go language</title>
   <meta name="description" content="Your ThemeForest item Name and description">
   <meta name="author" content="harnishdesign.net">
 
@@ -62,6 +62,9 @@
           <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
             <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/irizkyw117/"
                 target="_blank" title="" data-original-title="Irizkyw117"><i class="fab fa-instagram"></i></a></li>
+            <li class="social-icons-facebook"><a data-toggle="tooltip"
+                href="http://www.facebook.com/IchwanRizkyWahyudin/" target="_blank" title=""
+                data-original-title="Ichwan Rizky Wahyudin"><i class="fab fa-facebook"></i></a></li>
           </ul>
         </div>
       </nav>
@@ -81,6 +84,9 @@
             <ul class="nav flex-column">
               <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
               <li class="nav-item"><a class="nav-link" href="#vs_code">Visual Studio Code</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_commands">Commands</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_first_project">Membuat Program Pertama</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_pembahasan">Go Pembahasan</a></li>
             </ul>
           </li>
           <ul class="nav flex-column">
@@ -99,7 +105,7 @@
           <!-- Getting Started
 		============================ -->
           <section id="idocs_start">
-            <h1>Documentation</h1>
+            <h1>Golang Summary</h1>
             <hr>
             <div class="row">
               <div class="col-sm-6 col-lg-4">
@@ -122,12 +128,12 @@
           <!-- Installation
 		============================ -->
           <section id="idocs_installation">
-            <h2>Installation</h2>
+            <h3>Installation</h3>
             <p class="lead">Ikuti langkah-langkah berikut untuk memasang Golang:</p>
             <ol>
               <li>Silahkan kunjungi <strong><a href="https://go.dev/dl/">Website resmi Golang</a></strong> lalu download
                 file(.msi) dengan versi sesuai dengan keinginan dan sesuai dengan OS(Operating System) Anda.</li>
-              <li>Install go1.17.7.windows-amd64.msi (Versi Terbaru Saat Ini)</li>
+              <li>Install <code>go1.17.7.windows-amd64.msi</code> (Versi Terbaru Saat Ini)</li>
               <li>Jika sudah selesai cek versi Golang dengan cara memakai Command prompt(cmd)
                 <ul>
                   <li>
@@ -151,7 +157,7 @@
           <!-- Visual Studio Code
 		============================ -->
           <section id="vs_code">
-            <h2>Visual Studio Code</h2>
+            <h3>Visual Studio Code</h3>
             <p>Disini kita akan menggunakan Visual Studio Code untuk kode editor<br>
               Ada extension yang harus di install(pasang) di Visual Studio Code Anda. <a class="ml-1" target="_blank"
                 href="https://marketplace.visualstudio.com/items?itemName=golang.Go"><i
@@ -164,20 +170,24 @@
               Extension Marketplace di sebelah kiri (silakan lihat gambar berikut, deretan button paling kiri).
               Setelah itu ketikan Go pada inputan search, silakan install ekstensi Go buatan GO Team
               at Google.</p>
-            <pre><img src="assets/images/extension-golang.jpeg" class="img-fluid" alt="Responsive image">
-          </pre>
+            <img src="assets/images/extension-golang.jpeg" class="img-fluid" alt="Responsive image">
           </section>
 
           <!-- Go Commands -->
           <section id="go_commands">
-            <h2>Golang Commands</h2>
-            <p>Pengembangan aplikasi Go tak jauh dari hal-hal yang berbau CLI atau Command Line Interface. Proses inisialisasi projek, kompilasi, testing, eksekusi program, semuanya dilakukan lewat command line.
-              Go menyediakan command <code>go</code>, dan pada chapter ini kita akan mempelajari beberapa di antaranya.</p>
-            <h3>Command <code>god mod init</code></h3>
-            <p>Command go mod init digunakan untuk inisialisasi projek pada Go (menggunakan Go Modules). Untuk nama projek bisa menggunakan apapun, tapi umumnya adalah disamakan dengan nama direktori.
+            <hr class="divider">
+            <h3>Golang Commands</h3>
+            <p>Pengembangan aplikasi Go tak jauh dari hal-hal yang berbau CLI atau Command Line Interface. Proses
+              inisialisasi projek, kompilasi, testing, eksekusi program, semuanya dilakukan lewat command line.
+              Go menyediakan command <code>go</code>, dan pada chapter ini kita akan mempelajari beberapa di antaranya.
+            </p>
+            <h4>Command <code>god mod init</code></h4>
+            <p>Command go mod init digunakan untuk inisialisasi projek pada Go (menggunakan Go Modules). Untuk nama
+              projek bisa menggunakan apapun, tapi umumnya adalah disamakan dengan nama direktori.
 
-              Nama projek ini penting karena nantinya berpengaruh pada import path sub packages yang ada dalam projek tersebut.</p>
-              <code>
+              Nama projek ini penting karena nantinya berpengaruh pada import path sub packages yang ada dalam projek
+              tersebut.</p>
+            <code>
                 <ul style="list-style: none;">
                   <li>mkdir (nama-project)</li>
                   <li>cd (nama-project)</li>
@@ -185,31 +195,155 @@
                 </ul>
               </code>
 
-              <h3>Command <code>go run</code></h3>
-              <p>Command <code>go run</code> digunakan untuk eksekusi file program (file ber-ekstensi <code>.go</code> ). Cara penggunaannya dengan menuliskan command tersebut diikuti argumen nama file.
+            <h4>Command <code>go run</code></h4>
+            <p>Command <code>go run</code> digunakan untuk eksekusi file program (file ber-ekstensi <code>.go</code> ).
+              Cara penggunaannya dengan menuliskan command tersebut diikuti argumen nama file.
 
-                Berikut adalah contoh penerapan <code>go run</code> untuk eksekusi file program <code>main.go</code> yang tersimpan di path <code>project-pertama</code> yang path tersebut sudah diinisialisasi menggunakan <code>go mod init</code></p>
-                <code>
+              Berikut adalah contoh penerapan <code>go run</code> untuk eksekusi file program <code>main.go</code> yang
+              tersimpan di path <code>project-pertama</code> yang path tersebut sudah diinisialisasi menggunakan
+              <code>go mod init</code>
+            </p>
+            <code>
                   <ul style="list-style: none;">
                     <li>cd project-pertama</li>
                     <li>go run main.go</li>
                   </ul>
                 </code>
-                <pre style="text-align: center;">
+            <pre>
                   <img src="assets/images/go_run.jpeg" class="img-fluid" alt="Responsive image">
                 </pre>
-                <p>Command <code>go run</code> hanya bisa digunakan pada file yang nama package-nya adalah main</p>
-                <p>Jika ada banyak file yang package-nya main dan file-file tersebut berada pada satu direktori level dengan file utama, maka eksekusinya adalah dengan menuliskan semua file sebagai argument command <code>go run</code>. Contohnya bisa dilihat pada kode berikut.</p>
-                <code>
+            <p>Command <code>go run</code> hanya bisa digunakan pada file yang nama package-nya adalah main</p>
+            <p>Jika ada banyak file yang package-nya main dan file-file tersebut berada pada satu direktori level dengan
+              file utama, maka eksekusinya adalah dengan menuliskan semua file sebagai argument command
+              <code>go run</code>. Contohnya bisa dilihat pada kode berikut.
+            </p>
+            <code>
                   <ul style="list-style: none;">
                     <li>go run main.go library.go</li>
                   </ul>
                 </code>
-              </section>
+
+            <h4>Command <code>go test</code></h4>
+            <p>
+              Go menyediakan package <code>testing</code>, berguna untuk keperluan unit test. File yang akan di-test
+              harus memiliki akhiran <code>_test.go</code>.
+
+              Berikut adalah contoh penggunaan command <code>go test</code> untuk testing file
+              <code>main_test.go</code>.
+            </p>
+            <ul style="list-style: none;">
+              <li><code>go test main.go</code></li>
+            </ul>
+
+            <h4>Command <code>go build</code></h4>
+            <p>Command ini digunakan untuk compile file program</p>
+            <p>Sebenarnya ketika eksekusi program menggunakan <code>go run</code>, terjadi proses kompilasi juga. File
+              hasil kompilasi akan disimpan pada folder temporary untuk selanjutnya langsung dieksekusi.</p>
+            <p>Berbeda dengan go build, command ini menghasilkan file executable atau binary pada folder yang sedang
+              aktif. Contohnya bisa dilihat pada kode berikut.</p>
+            <img src="assets/images/go_builds.png" class="img-fluid" alt="Responsive image">
+            <p>Pada contoh di atas, projek project-pertama di-build, menghasilkan file baru pada folder yang sama, yaitu
+              <code>project-pertama.exe</code>, yang kemudian dieksekusi. Default-nya nama projek akan otomatis
+              dijadikan nama
+              binary.
+            </p>
+            <p>Untuk nama executable sendiri bisa diubah menggunakan flag -o. Contoh:
+            <ul style="list-style: none;">
+              <li><code>go build -o (nama-project)</code></li>
+              <li><code>go build -o nama-program.exe</code></li>
+            </ul>
+            </p>
+
+            <h3>Command <code>go get</code></h3>
+            <p>Command <code>go get</code> digunakan untuk men-download package. Sebagai contoh saya ingin men-download
+              package Kafka driver untuk Go pada projek project-pertama
+            <ul style="list-style: none;">
+              <li><code>cd project-pertama</code></li>
+              <li><code>go get github.com/segmentio/kafka-go</code></li>
+              <li><code>dir</code></li>
+            </ul>
+            </p>
+            <p>Pada contoh di atas,<code> github.com/segmentio/kafka-go</code> adalah URL package kafka-go. Package yang
+              sudah
+              terunduh tersimpan dalam temporary folder yang ter-link dengan project folder di mana command
+              <code>go get</code>
+              dieksekusi, menjadikan projek tersebut bisa meng-import package terunduh.
+            </p>
+            <p>Untuk mengunduh dependensi versi terbaru, gunakan flag -u pada command go get, misalnya: <br>
+            <ul style="list-style: none;">
+              <li><code>go get -u github.com/segmentio/kafka-go</code></li>
+            </ul>
+            Command go get harus dijalankan dalam folder project. Jika dijalankan di-luar project maka akan diunduh ke
+            pada GOPATH.
+            </p>
+
+            <h4>Command <code>go mod tidy</code></h4>
+            <p>Command <code>go mod tidy</code> digunakan untuk memvalidasi dependensi. Jika ada dependensi yang belum
+              ter-download, maka akan otomatis di-download.</p>
+
+              <h4>Command <code>go mod vendor</code></h4>
+            <p>Command ini digunakan untuk vendoring</p>
+          </section>
           <hr class="divider">
+          <section id="go_first_project">
+            <h3>Program Pertama</h3>
+            <p>Semua persiapan sudah selesai, saatnya masuk pada sesi programming. Program pertama yang akan kita buat adalah aplikasi kecil yang menampilkan text Hello world.</p>
+            <p>Pada chapter ini akan dijelaskan secara komprehensif step-by-step mulai dari awal. Mulai dari pembuatan project, pembuatan file program, sesi penulisan kode (coding), hingga eksekusi program.</p>
+
+            <h4>Inisialisasi Projek</h4>
+            <p>Buat direktori bernama <code>hello-world</code> bebas ditempatkan di mana. Lalu via CLI, masuk ke direktori tersebut dan jalankan command untuk inisialisasi projek.
+              <ul style="list-style: none;">
+                <li><code>mkdir hello-world</code></li>
+                <li><code>cd hello-world</code></li>
+                <li><code>go mod init hello-world</code></li>
+              </ul>
+            </p>
+            <h3>Load Projeck Folder ke Visual Studio Code</h3>
+            <p>Buka editor, di sini Saya menggunakan VSCode. Cari menu untuk menambahkan projek, lalu pilih projek folder <code>hello-world</code>. Untuk beberapa jenis editor, cara load projek bisa cukup dengan klik-drag folder tersebut ke editor.</p>
+            <p>File program di sini maksudnya adalah file yang isinya source code Go. File ini berekstensi <code>.go</code>.
+              <br>
+              Di dalam project yang telah dibuat, siapkan sebuah file dengan nama bebas, yang jelas harus ber-ekstensi <code>.go</code>. Pada contoh ini saya menggunakan nama file <code>main.go</code>.
+              <br>
+              Pembuatan file program bisa dilakukan lewat CLI atau browser, atau juga lewat editor. Pastikan file dibuat dalam projek folder ya.</p>
+            <h3>Projek Hello World</h3>
+            <p>Setelah project folder dan file program sudah siap, saatnya untuk programming.</p>
+            <p>Di bawah ini merupakan contoh kode program sederhana untuk memunculkan text Hello world ke layar output command prompt. Silakan salin kode berikut ke file program yang telah dibuat. Sebisa mungkin jangan copy paste. Biasakan untuk menulis dari awal, agar cepat terbiasa dan familiar dengan Go.</p>
+            <pre>
+              <code>
+                package main
+
+                import "fmt"
+
+                func main() {
+                  fmt.Println("Hello World")
+                }
+              </code>
+            </pre>
+            <p>Setelah kode disalin, buka terminal (atau CMD bagi pengguna Windows), lalu masuk ke direktori proyek, kemudian jalankan program menggunakan perintah <code>go run</code>.</p>
+            <ul style="list-style: none;">
+                <li><code>$ go run main.go</code></li>
+                <li><code>Hello World</code></li>
+            </ul>
+          </section>
+          <hr class="divider">
+          <section id="go_pembahasan">
+            <h3>Pembahasan</h3>
+            <h4><code>package main</code></h4>
+            <p>Setiap file program harus memiliki <code>package</code>. Setiap project harus ada minimal satu file dengan nama <code>package main</code>. File yang ber-package main, akan dieksekusi pertama kali ketika program di jalankan.</p>
+            <h4><code>import "fmt"</code></h4>
+            <p>Import package yang dibutuhkan untuk program. Pada contoh ini, package <code>fmt</code> digunakan untuk menampilkan text ke layar.</p>
+            <h4><code>func main()</code></h4>
+            <p>Fungsi utama. Fungsi utama adalah fungsi yang akan dieksekusi pertama kali ketika program dijalankan.</p>
+            <h4><code>fmt.Println("Hello World")</code></h4>
+            <p>Fungsi <code>fmt.Println()</code> digunakan untuk memunculkan text ke layar (pada konteks ini, terminal atau CMD). Di program pertama yang telah kita buat, fungsi ini memunculkan tulisan Hello world. <br>
+              Fungsi fmt.Println() berada dalam package fmt, maka untuk menggunakannya perlu package tersebut untuk di-import terlebih dahulu. <br> <br>
+              Fungsi fmt.Println() dapat menampung parameter yang tidak terbatas jumlahnya. Semua data parameter akan dimunculkan dengan pemisah tanda spasi.
+            <ul style="list-style: none;">
+              <li><code>fmt.Println("Hello", "world!", "how", "are", "you")</code></li>
+            </ul></p>
+          </section>
         </div>
       </div>
-
     </div>
     <!-- Content end -->
 
@@ -218,17 +352,14 @@
     <footer id="footer" class="section bg-dark footer-text-light">
       <div class="container">
         <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
-          <li><a data-toggle="tooltip" href="https://twitter.com/harnishdesign/" target="_blank" title=""
-              data-original-title="Twitter"><i class="fab fa-twitter"></i></a></li>
-          <li><a data-toggle="tooltip" href="http://www.facebook.com/harnishdesign/" target="_blank" title=""
-              data-original-title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a data-toggle="tooltip" href="http://www.dribbble.com/harnishdesign/" target="_blank" title=""
-              data-original-title="Dribbble"><i class="fab fa-dribbble"></i></a></li>
-          <li><a data-toggle="tooltip" href="http://www.github.com/" target="_blank" title=""
-              data-original-title="GitHub"><i class="fab fa-github"></i></a></li>
+          <li><a data-toggle="tooltip" href="http://www.instagram.com/Irizkyw117" target="_blank" title=""
+              data-original-title="Irizkyw117"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/IchwanRizkyWahyudin/"
+              target="_blank" title="Ichwan Rizky Wahyudin" data-original-title="Ichwan Rizky Wahyudin"><i
+                class="fab fa-facebook"></i></a></li>
         </ul>
         <p class="text-center">Copyright &copy; 2022 <a
-            href="http://www.harnishdesign.net/idocs-one-page-documentation-html-template/">iBlog</a>. All Rights
+            href="http://www.irizkyw.github.io">iBlog</a>. All Rights
           Reserved.</p>
         <p class="text-2 text-center mb-0">Design by HarnishDesign.</p>
       </div>
