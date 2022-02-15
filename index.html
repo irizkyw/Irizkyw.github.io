@@ -209,9 +209,7 @@
                     <li>go run main.go</li>
                   </ul>
                 </code>
-            <pre>
-                  <img src="assets/images/go_run.jpeg" class="img-fluid" alt="Responsive image">
-                </pre>
+            <img src="assets/images/go_run.jpeg" class="img-fluid" alt="Responsive image">
             <p>Command <code>go run</code> hanya bisa digunakan pada file yang nama package-nya adalah main</p>
             <p>Jika ada banyak file yang package-nya main dan file-file tersebut berada pada satu direktori level dengan
               file utama, maka eksekusinya adalah dengan menuliskan semua file sebagai argument command
@@ -281,33 +279,44 @@
             <p>Command <code>go mod tidy</code> digunakan untuk memvalidasi dependensi. Jika ada dependensi yang belum
               ter-download, maka akan otomatis di-download.</p>
 
-              <h4>Command <code>go mod vendor</code></h4>
+            <h4>Command <code>go mod vendor</code></h4>
             <p>Command ini digunakan untuk vendoring</p>
           </section>
           <hr class="divider">
           <section id="go_first_project">
             <h3>Program Pertama</h3>
-            <p>Semua persiapan sudah selesai, saatnya masuk pada sesi programming. Program pertama yang akan kita buat adalah aplikasi kecil yang menampilkan text Hello world.</p>
-            <p>Pada chapter ini akan dijelaskan secara komprehensif step-by-step mulai dari awal. Mulai dari pembuatan project, pembuatan file program, sesi penulisan kode (coding), hingga eksekusi program.</p>
+            <p>Semua persiapan sudah selesai, saatnya masuk pada sesi programming. Program pertama yang akan kita buat
+              adalah aplikasi kecil yang menampilkan text Hello world.</p>
+            <p>Pada chapter ini akan dijelaskan secara komprehensif step-by-step mulai dari awal. Mulai dari pembuatan
+              project, pembuatan file program, sesi penulisan kode (coding), hingga eksekusi program.</p>
 
             <h4>Inisialisasi Projek</h4>
-            <p>Buat direktori bernama <code>hello-world</code> bebas ditempatkan di mana. Lalu via CLI, masuk ke direktori tersebut dan jalankan command untuk inisialisasi projek.
-              <ul style="list-style: none;">
-                <li><code>mkdir hello-world</code></li>
-                <li><code>cd hello-world</code></li>
-                <li><code>go mod init hello-world</code></li>
-              </ul>
+            <p>Buat direktori bernama <code>hello-world</code> bebas ditempatkan di mana. Lalu via CLI, masuk ke
+              direktori tersebut dan jalankan command untuk inisialisasi projek.
+            <ul style="list-style: none;">
+              <li><code>mkdir hello-world</code></li>
+              <li><code>cd hello-world</code></li>
+              <li><code>go mod init hello-world</code></li>
+            </ul>
             </p>
             <h3>Load Projeck Folder ke Visual Studio Code</h3>
-            <p>Buka editor, di sini Saya menggunakan VSCode. Cari menu untuk menambahkan projek, lalu pilih projek folder <code>hello-world</code>. Untuk beberapa jenis editor, cara load projek bisa cukup dengan klik-drag folder tersebut ke editor.</p>
-            <p>File program di sini maksudnya adalah file yang isinya source code Go. File ini berekstensi <code>.go</code>.
+            <p>Buka editor, di sini Saya menggunakan VSCode. Cari menu untuk menambahkan projek, lalu pilih projek
+              folder <code>hello-world</code>. Untuk beberapa jenis editor, cara load projek bisa cukup dengan klik-drag
+              folder tersebut ke editor.</p>
+            <p>File program di sini maksudnya adalah file yang isinya source code Go. File ini berekstensi
+              <code>.go</code>.
               <br>
-              Di dalam project yang telah dibuat, siapkan sebuah file dengan nama bebas, yang jelas harus ber-ekstensi <code>.go</code>. Pada contoh ini saya menggunakan nama file <code>main.go</code>.
+              Di dalam project yang telah dibuat, siapkan sebuah file dengan nama bebas, yang jelas harus ber-ekstensi
+              <code>.go</code>. Pada contoh ini saya menggunakan nama file <code>main.go</code>.
               <br>
-              Pembuatan file program bisa dilakukan lewat CLI atau browser, atau juga lewat editor. Pastikan file dibuat dalam projek folder ya.</p>
+              Pembuatan file program bisa dilakukan lewat CLI atau browser, atau juga lewat editor. Pastikan file dibuat
+              dalam projek folder ya.
+            </p>
             <h3>Projek Hello World</h3>
             <p>Setelah project folder dan file program sudah siap, saatnya untuk programming.</p>
-            <p>Di bawah ini merupakan contoh kode program sederhana untuk memunculkan text Hello world ke layar output command prompt. Silakan salin kode berikut ke file program yang telah dibuat. Sebisa mungkin jangan copy paste. Biasakan untuk menulis dari awal, agar cepat terbiasa dan familiar dengan Go.</p>
+            <p>Di bawah ini merupakan contoh kode program sederhana untuk memunculkan text Hello world ke layar output
+              command prompt. Silakan salin kode berikut ke file program yang telah dibuat. Sebisa mungkin jangan copy
+              paste. Biasakan untuk menulis dari awal, agar cepat terbiasa dan familiar dengan Go.</p>
             <pre>
               <code>
                 package main
@@ -319,28 +328,36 @@
                 }
               </code>
             </pre>
-            <p>Setelah kode disalin, buka terminal (atau CMD bagi pengguna Windows), lalu masuk ke direktori proyek, kemudian jalankan program menggunakan perintah <code>go run</code>.</p>
+            <p>Setelah kode disalin, buka terminal (atau CMD bagi pengguna Windows), lalu masuk ke direktori proyek,
+              kemudian jalankan program menggunakan perintah <code>go run</code>.</p>
             <ul style="list-style: none;">
-                <li><code>$ go run main.go</code></li>
-                <li><code>Hello World</code></li>
+              <li><code>$ go run main.go</code></li>
+              <li><code>Hello World</code></li>
             </ul>
           </section>
           <hr class="divider">
           <section id="go_pembahasan">
             <h3>Pembahasan</h3>
             <h4><code>package main</code></h4>
-            <p>Setiap file program harus memiliki <code>package</code>. Setiap project harus ada minimal satu file dengan nama <code>package main</code>. File yang ber-package main, akan dieksekusi pertama kali ketika program di jalankan.</p>
+            <p>Setiap file program harus memiliki <code>package</code>. Setiap project harus ada minimal satu file
+              dengan nama <code>package main</code>. File yang ber-package main, akan dieksekusi pertama kali ketika
+              program di jalankan.</p>
             <h4><code>import "fmt"</code></h4>
-            <p>Import package yang dibutuhkan untuk program. Pada contoh ini, package <code>fmt</code> digunakan untuk menampilkan text ke layar.</p>
+            <p>Import package yang dibutuhkan untuk program. Pada contoh ini, package <code>fmt</code> digunakan untuk
+              menampilkan text ke layar.</p>
             <h4><code>func main()</code></h4>
             <p>Fungsi utama. Fungsi utama adalah fungsi yang akan dieksekusi pertama kali ketika program dijalankan.</p>
             <h4><code>fmt.Println("Hello World")</code></h4>
-            <p>Fungsi <code>fmt.Println()</code> digunakan untuk memunculkan text ke layar (pada konteks ini, terminal atau CMD). Di program pertama yang telah kita buat, fungsi ini memunculkan tulisan Hello world. <br>
-              Fungsi fmt.Println() berada dalam package fmt, maka untuk menggunakannya perlu package tersebut untuk di-import terlebih dahulu. <br> <br>
-              Fungsi fmt.Println() dapat menampung parameter yang tidak terbatas jumlahnya. Semua data parameter akan dimunculkan dengan pemisah tanda spasi.
+            <p>Fungsi <code>fmt.Println()</code> digunakan untuk memunculkan text ke layar (pada konteks ini, terminal
+              atau CMD). Di program pertama yang telah kita buat, fungsi ini memunculkan tulisan Hello world. <br>
+              Fungsi fmt.Println() berada dalam package fmt, maka untuk menggunakannya perlu package tersebut untuk
+              di-import terlebih dahulu. <br> <br>
+              Fungsi fmt.Println() dapat menampung parameter yang tidak terbatas jumlahnya. Semua data parameter akan
+              dimunculkan dengan pemisah tanda spasi.
             <ul style="list-style: none;">
               <li><code>fmt.Println("Hello", "world!", "how", "are", "you")</code></li>
-            </ul></p>
+            </ul>
+            </p>
           </section>
         </div>
       </div>
@@ -358,8 +375,7 @@
               target="_blank" title="Ichwan Rizky Wahyudin" data-original-title="Ichwan Rizky Wahyudin"><i
                 class="fab fa-facebook"></i></a></li>
         </ul>
-        <p class="text-center">Copyright &copy; 2022 <a
-            href="http://www.irizkyw.github.io">iBlog</a>. All Rights
+        <p class="text-center">Copyright &copy; 2022 <a href="http://www.irizkyw.github.io">iBlog</a>. All Rights
           Reserved.</p>
         <p class="text-2 text-center mb-0">Design by HarnishDesign.</p>
       </div>
