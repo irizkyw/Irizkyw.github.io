@@ -88,13 +88,14 @@
               <li class="nav-item"><a class="nav-link" href="#go_pembahasan">Go Pembahasan</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link active" href="#">Variabel</a>
+          <li class="nav-item"><a class="nav-link active" href="#go_variabel">Variabel</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#">Tipe Data</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_tipe_data">Tipe Data</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel var</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Variabel Underscore _</a></li>
               <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel Menggunakan <code>new</code></a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel Menggunakan <code>make</code></a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel Menggunakan <code>make</code></a>
+              </li>
             </ul>
           </li>
           <ul class="nav flex-column">
@@ -140,7 +141,7 @@
             <p class="lead">Ikuti langkah-langkah berikut untuk memasang Golang:</p>
             <ol>
               <li>Silahkan kunjungi <strong><a href="https://go.dev/dl/">Website resmi Golang</a></strong> lalu download
-                file(.msi) dengan versi sesuai dengan keinginan dan sesuai dengan OS(Operating System) Anda.</li>
+                file(.msi) dengan versi sesuai dengan keinginan dan sesuai dengan OS(Operating System) kamu.</li>
               <li>Install <code>go1.17.7.windows-amd64.msi</code> (Versi Terbaru Saat Ini)</li>
               <li>Jika sudah selesai cek versi Golang dengan cara memakai Command prompt(cmd)
                 <ul>
@@ -149,7 +150,7 @@
                   </li>
                 </ul>
               </li>
-              <li>Jika sudah mengecek akan menampilkan versi Golang artinya berhasil terpasang di Komputer Anda, Contoh:
+              <li>Jika sudah mengecek akan menampilkan versi Golang artinya berhasil terpasang di Komputer kamu, Contoh:
                 <ul>
                   <li>
                     <code>C:\Users\IchwanR>go version <br>
@@ -167,7 +168,7 @@
           <section id="vs_code">
             <h3>Visual Studio Code</h3>
             <p>Disini kita akan menggunakan Visual Studio Code untuk kode editor<br>
-              Ada extension yang harus di install(pasang) di Visual Studio Code Anda. <a class="ml-1" target="_blank"
+              Ada extension yang harus di install(pasang) di Visual Studio Code kamu. <a class="ml-1" target="_blank"
                 href="https://marketplace.visualstudio.com/items?itemName=golang.Go"><i
                   class="fas fa-external-link-alt"></i> Extension Golang VsCode</a></p>
             <p>Dengan meng-install Go Extension pada VSCode, maka development akan menjadi lebih menyenangkan dan mudah.
@@ -248,8 +249,8 @@
             <p>Berbeda dengan go build, command ini menghasilkan file executable atau binary pada folder yang sedang
               aktif. Contohnya bisa dilihat pada kode berikut.</p>
             <img src="assets/images/go_builds.png" class="img-fluid" alt="Responsive image">
-            <p>Pada contoh di atas, projek project-pertama di-build, menghasilkan file baru pada folder yang sama, yaitu
-              <code>project-pertama.exe</code>, yang kemudian dieksekusi. Default-nya nama projek akan otomatis
+            <p>Pada contoh di atas, projek main.go di-build, menghasilkan file baru pada folder yang sama, yaitu
+              <code>main.exe</code>, yang kemudian dieksekusi. Default-nya nama projek akan otomatis
               dijadikan nama
               binary.
             </p>
@@ -307,7 +308,7 @@
               <li><code>go mod init hello-world</code></li>
             </ul>
             </p>
-            <h3>Load Projeck Folder ke Visual Studio Code</h3>
+            <h3>Load Projek Folder ke Visual Studio Code</h3>
             <p>Buka editor, di sini Saya menggunakan VSCode. Cari menu untuk menambahkan projek, lalu pilih projek
               folder <code>hello-world</code>. Untuk beberapa jenis editor, cara load projek bisa cukup dengan klik-drag
               folder tersebut ke editor.</p>
@@ -361,11 +362,65 @@
               Fungsi fmt.Println() berada dalam package fmt, maka untuk menggunakannya perlu package tersebut untuk
               di-import terlebih dahulu. <br> <br>
               Fungsi fmt.Println() dapat menampung parameter yang tidak terbatas jumlahnya. Semua data parameter akan
-              dimunculkan dengan pemisah tanda spasi.
+              dimunculkan dengan pemisah tkamu spasi.
             <ul style="list-style: none;">
-              <li><code>fmt.Println("Hello", "world!", "how", "are", "you")</code></li>
+              <li><code>fmt.Println("Haloo", "Nama!", "Saya", "Adalah", "Ucup")</code></li>
             </ul>
             </p>
+          </section>
+          <hr class="divider">
+
+          <section id="go_variabel">
+            <h3>Variabel</h3>
+            <p>
+              Variabel adalah tempat untuk menyimpan data. Variabel dapat berupa string, integer, boolean.
+              <br>
+              dalam Go, variabel dapat dibuat dengan menggunakan keyword <code>var</code> dan menggunakan tipe data
+              yang diinginkan. <br>
+              Contoh : <br>
+              <code>var nama string = "Ucup"</code>
+            </p>
+          </section>
+          <section id="go_tipe_data">
+            <h4>Tipe data Variabel</h4>
+            <p>Go memiliki aturan yang cukup rese atau ketat dalam hal penulisan variabel. Ketika deklarasi, tipe data
+              yang digunakan harus dituliskan juga. Istilah lain dari konsep ini bisa di sebut <strong>manifest typing</strong>. <br>
+              Tipe data yang dapat digunakan adalah:
+              <ul>
+                <li>string</li>
+                <li>integer</li>
+                <li>boolean</li>
+                <li>float</li>
+                <li>uint</li>
+                <li>uint8</li>
+                <li>uint16</li>
+                <li>uint32</li>
+                <li>uint64</li>
+                <li>int</li>
+                <li>int8</li>
+                <li>int16</li>
+                <li>int32</li>
+                <li>int64</li>
+                <li>uintptr</li>
+                <li>float32</li>
+                <li>float64</li>
+              </ul>
+              Dan masih banyak lagi..  <br>
+              Berikut contoh pembuatan variabel serta tipe data.</p>
+            <pre>
+                <code>
+                  package main 
+
+                  import "fmt"
+
+                  func main() {
+                  var nama string = "Ucup"
+                  var umur int = 20
+                  
+                  fmt.Println("Nama saya", nama, "dan umur saya", umur)
+                  }
+                </code>
+              </pre>
           </section>
         </div>
       </div>
