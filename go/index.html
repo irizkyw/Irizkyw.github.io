@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+  <link href="../assets/images/favicon.png" rel="icon" />
+  <title>Summary | Go language</title>
+  <meta name="description" content="Your ThemeForest item Name and description">
+  <meta name="author" content="harnishdesign.net">
+
+  <!-- Stylesheet
+============================== -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/bootstrap/css/bootstrap.min.css" />
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/font-awesome/css/all.min.css" />
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/magnific-popup/magnific-popup.min.css" />
+  <!-- Highlight Syntax -->
+  <link rel="stylesheet" type="text/css" href="../assets/vendor/highlight.js/styles/github.css" />
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="../assets/css/stylesheet.css" />
+</head>
+
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+  <!-- Preloader -->
+  <div class="preloader">
+    <div class="lds-ellipsis">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- Preloader End -->
+
+  <!-- Document Wrapper   
+=============================== -->
+  <div id="main-wrapper">
+
+    <!-- Header
+  ============================ -->
+    <header id="header" class="sticky-top">
+      <!-- Navbar -->
+      <nav class="primary-menu navbar navbar-expand-lg navbar-dropdown-dark">
+        <div class="container-fluid">
+          <!-- Sidebar Toggler -->
+          <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span
+              class="w-75"></span><span class="w-50"></span></button>
+
+          <!-- Logo -->
+          <a class="logo ml-md-3" href="index.html" title="iDocs logo"> <img src="../assets/images/iblog.png"
+              alt="iblog logo" /> </a>
+          <!-- Logo End -->
+
+          <!-- Navbar Toggler -->
+
+          <ul class="social-icons social-icons-sm ml-lg-2 mr-2">
+            <li class="social-icons-instagram"><a data-toggle="tooltip" href="http://www.instagram.com/irizkyw117/"
+                target="_blank" title="" data-original-title="Irizkyw117"><i class="fab fa-instagram"></i></a></li>
+            <li class="social-icons-facebook"><a data-toggle="tooltip"
+                href="http://www.facebook.com/IchwanRizkyWahyudin/" target="_blank" title=""
+                data-original-title="Ichwan Rizky Wahyudin"><i class="fab fa-facebook"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+    </header>
+    <!-- Header End -->
+
+    <!-- Content
+  ============================ -->
+    <div id="content" role="main">
+
+      <!-- Sidebar Navigation
+	============================ -->
+      <div class="idocs-navigation bg-light">
+        <ul class="nav flex-column ">
+          <li class="nav-item"><a class="nav-link active" href="#idocs_start">Getting Started</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#idocs_installation">Installation</a></li>
+              <li class="nav-item"><a class="nav-link" href="#vs_code">Visual Studio Code</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_commands">Commands</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_first_project">Membuat Program Pertama</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_pembahasan">Go Pembahasan</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#go_operator">Operator</a>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#go_if">Pengkondisian If</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#go_if_else">Pengkodisian If Else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_if_else_if">Pengkodisian Else If</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_switch">Pengkodisian Switch</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#go_loops">Looping (perulangan)</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#go_for_range">Looping range </a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_for_without_arguments">Looping Tanpa Argumen</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Docs Content
+	============================ -->
+      <div class="idocs-content">
+        <div class="container">
+
+          <!-- Getting Started
+		============================ -->
+          <section id="idocs_start">
+            <h1>Golang Summary</h1>
+            <hr>
+            <div class="row">
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong>Version:</strong> 1.1</li>
+                  <li><strong>Author:</strong> Ichwan Rizky Wahyudin</li>
+                </ul>
+              </div>
+              <div class="col-sm-6 col-lg-4">
+                <ul class="list-unstyled">
+                  <li><strong class="font-weight-700">Created:</strong> 15 Februari, 2022</li>
+                  <li><strong>Update:</strong> 16 Februari, 2022</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Installation
+		============================ -->
+          <section id="idocs_installation">
+            <h3>Installation</h3>
+            <p class="lead">Ikuti langkah-langkah berikut untuk memasang Golang:</p>
+            <ol>
+              <li>Silahkan kunjungi <strong><a href="https://go.dev/dl/">Website resmi Golang</a></strong> lalu download
+                file(.msi) dengan versi sesuai dengan keinginan dan sesuai dengan OS(Operating System) kamu.</li>
+              <li>Install <code>go1.17.7.windows-amd64.msi</code> (Versi Terbaru Saat Ini)</li>
+              <li>Jika sudah selesai cek versi Golang dengan cara memakai Command prompt(cmd)
+                <ul>
+                  <li>
+                    <code>go version</code>
+                  </li>
+                </ul>
+              </li>
+              <li>Jika sudah mengecek akan menampilkan versi Golang artinya berhasil terpasang di Komputer kamu, Contoh:
+                <ul>
+                  <li>
+                    <code>C:\Users\IchwanR>go version <br>
+                    go version go1.17.7 windows/amd64</code>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </section>
+
+          <hr class="divider">
+
+          <!-- Visual Studio Code
+		============================ -->
+          <section id="vs_code">
+            <h3>Visual Studio Code</h3>
+            <p>Disini kita akan menggunakan Visual Studio Code untuk kode editor<br>
+              Ada extension yang harus di install(pasang) di Visual Studio Code kamu. <a class="ml-1" target="_blank"
+                href="https://marketplace.visualstudio.com/items?itemName=golang.Go"><i
+                  class="fas fa-external-link-alt"></i> Extension Golang VsCode</a></p>
+            <p>Dengan meng-install Go Extension pada VSCode, maka development akan menjadi lebih menyenangkan dan mudah.
+              Banyak benefit yang didapat dari ekstensi ini, beberapa di antaranya adalah integrasi dengan kompiler Go,
+              auto lint on save, testing with coverage, fasilitas debugging with breakpoints, dan lainnya.
+
+              Cara instalasi ekstensi sendiri cukup mudah, <code> klik View -> Extension </code> atau klik ikon
+              Extension Marketplace di sebelah kiri (silakan lihat gambar berikut, deretan button paling kiri).
+              Setelah itu ketikan Go pada inputan search, silakan install ekstensi Go buatan GO Team
+              at Google.</p>
+            <img src="../assets/images/extension-golang.jpeg" class="img-fluid" alt="Responsive image">
+          </section>
+
+          <!-- Go Commands -->
+          <section id="go_commands">
+            <hr class="divider">
+            <h3>Golang Commands</h3>
+            <p>Pengembangan aplikasi Go tak jauh dari hal-hal yang berbau CLI atau Command Line Interface. Proses
+              inisialisasi projek, kompilasi, testing, eksekusi program, semuanya dilakukan lewat command line.
+              Go menyediakan command <code>go</code>, dan pada chapter ini kita akan mempelajari beberapa di antaranya.
+            </p>
+            <h4>Command <code>god mod init</code></h4>
+            <p>Command go mod init digunakan untuk inisialisasi projek pada Go (menggunakan Go Modules). Untuk nama
+              projek bisa menggunakan apapun, tapi umumnya adalah disamakan dengan nama direktori.
+
+              Nama projek ini penting karena nantinya berpengaruh pada import path sub packages yang ada dalam projek
+              tersebut.</p>
+            <code>
+                <ul style="list-style: none;">
+                  <li>mkdir (nama-project)</li>
+                  <li>cd (nama-project)</li>
+                  <li>go mod init (nama-project)</li>
+                </ul>
+              </code>
+
+            <h4>Command <code>go run</code></h4>
+            <p>Command <code>go run</code> digunakan untuk eksekusi file program (file ber-ekstensi <code>.go</code> ).
+              Cara penggunaannya dengan menuliskan command tersebut diikuti argumen nama file.
+
+              Berikut adalah contoh penerapan <code>go run</code> untuk eksekusi file program <code>main.go</code> yang
+              tersimpan di path <code>project-pertama</code> yang path tersebut sudah diinisialisasi menggunakan
+              <code>go mod init</code>
+            </p>
+            <code>
+                  <ul style="list-style: none;">
+                    <li>cd project-pertama</li>
+                    <li>go run main.go</li>
+                  </ul>
+                </code>
+            <img src="../assets/images/go_run.jpeg" class="img-fluid" alt="Responsive image">
+            <p>Command <code>go run</code> hanya bisa digunakan pada file yang nama package-nya adalah main</p>
+            <p>Jika ada banyak file yang package-nya main dan file-file tersebut berada pada satu direktori level dengan
+              file utama, maka eksekusinya adalah dengan menuliskan semua file sebagai argument command
+              <code>go run</code>. Contohnya bisa dilihat pada kode berikut.
+            </p>
+            <code>
+                  <ul style="list-style: none;">
+                    <li>go run main.go library.go</li>
+                  </ul>
+                </code>
+
+            <h4>Command <code>go test</code></h4>
+            <p>
+              Go menyediakan package <code>testing</code>, berguna untuk keperluan unit test. File yang akan di-test
+              harus memiliki akhiran <code>_test.go</code>.
+
+              Berikut adalah contoh penggunaan command <code>go test</code> untuk testing file
+              <code>main_test.go</code>.
+            </p>
+            <ul style="list-style: none;">
+              <li><code>go test main.go</code></li>
+            </ul>
+
+            <h4>Command <code>go build</code></h4>
+            <p>Command ini digunakan untuk compile file program</p>
+            <p>Sebenarnya ketika eksekusi program menggunakan <code>go run</code>, terjadi proses kompilasi juga. File
+              hasil kompilasi akan disimpan pada folder temporary untuk selanjutnya langsung dieksekusi.</p>
+            <p>Berbeda dengan go build, command ini menghasilkan file executable atau binary pada folder yang sedang
+              aktif. Contohnya bisa dilihat pada kode berikut.</p>
+            <img src="../assets/images/go_builds.png" class="img-fluid" alt="Responsive image">
+            <p>Pada contoh di atas, projek main.go di-build, menghasilkan file baru pada folder yang sama, yaitu
+              <code>main.exe</code>, yang kemudian dieksekusi. Default-nya nama projek akan otomatis
+              dijadikan nama
+              binary.
+            </p>
+            <p>Untuk nama executable sendiri bisa diubah menggunakan flag -o. Contoh:
+            <ul style="list-style: none;">
+              <li><code>go build -o (nama-project)</code></li>
+              <li><code>go build -o main.exe</code></li>
+            </ul>
+            </p>
+
+            <h3>Command <code>go get</code></h3>
+            <p>Command <code>go get</code> digunakan untuk men-download package. Sebagai contoh saya ingin men-download
+              package Kafka driver untuk Go pada projek project-pertama
+            <ul style="list-style: none;">
+              <li><code>cd project-pertama</code></li>
+              <li><code>go get github.com/segmentio/kafka-go</code></li>
+              <li><code>dir</code></li>
+            </ul>
+            </p>
+            <p>Pada contoh di atas,<code> github.com/segmentio/kafka-go</code> adalah URL package kafka-go. Package yang
+              sudah
+              terunduh tersimpan dalam temporary folder yang ter-link dengan project folder di mana command
+              <code>go get</code>
+              dieksekusi, menjadikan projek tersebut bisa meng-import package terunduh.
+            </p>
+            <p>Untuk mengunduh dependensi versi terbaru, gunakan flag -u pada command go get, misalnya: <br>
+            <ul style="list-style: none;">
+              <li><code>go get -u github.com/segmentio/kafka-go</code></li>
+            </ul>
+            Command go get harus dijalankan dalam folder project. Jika dijalankan di-luar project maka akan diunduh ke
+            pada GOPATH.
+            </p>
+
+            <h4>Command <code>go mod tidy</code></h4>
+            <p>Command <code>go mod tidy</code> digunakan untuk memvalidasi dependensi. Jika ada dependensi yang belum
+              ter-download, maka akan otomatis di-download.</p>
+
+            <h4>Command <code>go mod vendor</code></h4>
+            <p>Command ini digunakan untuk vendoring</p>
+          </section>
+          <hr class="divider">
+          <section id="go_first_project">
+            <h3>Program Pertama</h3>
+            <p>Semua persiapan sudah selesai, saatnya masuk pada sesi programming. Program pertama yang akan kita buat
+              adalah aplikasi kecil yang menampilkan text Hello world.</p>
+            <p>Pada chapter ini akan dijelaskan secara komprehensif step-by-step mulai dari awal. Mulai dari pembuatan
+              project, pembuatan file program, sesi penulisan kode (coding), hingga eksekusi program.</p>
+
+            <h4>Inisialisasi Projek</h4>
+            <p>Buat direktori bernama <code>hello-world</code> bebas ditempatkan di mana. Lalu via CLI, masuk ke
+              direktori tersebut dan jalankan command untuk inisialisasi projek.
+            <ul style="list-style: none;">
+              <li><code>mkdir hello-world</code></li>
+              <li><code>cd hello-world</code></li>
+              <li><code>go mod init hello-world</code></li>
+            </ul>
+            </p>
+            <h3>Load Projek Folder ke Visual Studio Code</h3>
+            <p>Buka editor, di sini Saya menggunakan VSCode. Cari menu untuk menambahkan projek, lalu pilih projek
+              folder <code>hello-world</code>. Untuk beberapa jenis editor, cara load projek bisa cukup dengan klik-drag
+              folder tersebut ke editor.</p>
+            <p>File program di sini maksudnya adalah file yang isinya source code Go. File ini berekstensi
+              <code>.go</code>.
+              <br>
+              Di dalam project yang telah dibuat, siapkan sebuah file dengan nama bebas, yang jelas harus ber-ekstensi
+              <code>.go</code>. Pada contoh ini saya menggunakan nama file <code>main.go</code>.
+              <br>
+              Pembuatan file program bisa dilakukan lewat CLI atau browser, atau juga lewat editor. Pastikan file dibuat
+              dalam projek folder ya.
+            </p>
+            <h3>Projek Hello World</h3>
+            <p>Setelah project folder dan file program sudah siap, saatnya untuk programming.</p>
+            <p>Di bawah ini merupakan contoh kode program sederhana untuk memunculkan text Hello world ke layar output
+              command prompt. Silakan salin kode berikut ke file program yang telah dibuat. Sebisa mungkin jangan copy
+              paste. Biasakan untuk menulis dari awal, agar cepat terbiasa dan familiar dengan Go.</p>
+            <pre>
+              <code>
+                package main
+
+                import "fmt"
+
+                func main() {
+                  fmt.Println("Hello World")
+                }
+              </code>
+            </pre>
+            <p>Setelah kode disalin, buka terminal (atau CMD bagi pengguna Windows), lalu masuk ke direktori proyek,
+              kemudian jalankan program menggunakan perintah <code>go run</code>.</p>
+            <ul style="list-style: none;">
+              <li><code>$ go run main.go</code></li>
+              <li><code>Hello World</code></li>
+            </ul>
+          </section>
+          <hr class="divider">
+          <section id="go_pembahasan">
+            <h3>Pembahasan</h3>
+            <h4><code>package main</code></h4>
+            <p>Setiap file program harus memiliki <code>package</code>. Setiap project harus ada minimal satu file
+              dengan nama <code>package main</code>. File yang ber-package main, akan dieksekusi pertama kali ketika
+              program di jalankan.</p>
+            <h4><code>import "fmt"</code></h4>
+            <p>Import package yang dibutuhkan untuk program. Pada contoh ini, package <code>fmt</code> digunakan untuk
+              menampilkan text ke layar.</p>
+            <h4><code>func main()</code></h4>
+            <p>Fungsi utama. Fungsi utama adalah fungsi yang akan dieksekusi pertama kali ketika program dijalankan.</p>
+            <h4><code>fmt.Println("Hello World")</code></h4>
+            <p>Fungsi <code>fmt.Println()</code> digunakan untuk memunculkan text ke layar (pada konteks ini, terminal
+              atau CMD). Di program pertama yang telah kita buat, fungsi ini memunculkan tulisan Hello world. <br>
+              Fungsi fmt.Println() berada dalam package fmt, maka untuk menggunakannya perlu package tersebut untuk
+              di-import terlebih dahulu. <br> <br>
+              Fungsi fmt.Println() dapat menampung parameter yang tidak terbatas jumlahnya. Semua data parameter akan
+              dimunculkan dengan pemisah tkamu spasi.
+            <ul style="list-style: none;">
+              <li><code>fmt.Println("Haloo", "Nama!", "Saya", "Adalah", "Ucup")</code></li>
+            </ul>
+            </p>
+          </section>
+          <hr class="divider">
+
+          <section id="go_variabel">
+            <h3>Variabel</h3>
+            <p>
+              Variabel adalah tempat untuk menyimpan data. Variabel dapat berupa string, integer, boolean.
+              <br>
+              dalam Go, variabel dapat dibuat dengan menggunakan keyword <code>var</code> dan menggunakan tipe data
+              yang diinginkan. <br>
+              Contoh : <br>
+              <code>var nama string = "Ucup"</code>
+            </p>
+          </section>
+          <section id="go_tipe_data">
+            <h4>Tipe data Variabel</h4>
+            <p>Go memiliki aturan yang cukup rese atau ketat dalam hal penulisan variabel. Ketika deklarasi, tipe data
+              yang digunakan harus dituliskan juga. Istilah lain dari konsep ini bisa di sebut <strong>manifest
+                typing</strong>. <br>
+              Tipe data yang dapat digunakan adalah:
+            <ul>
+              <li>string</li>
+              <li>integer</li>
+              <li>boolean</li>
+              <li>float</li>
+              <li>uint</li>
+              <li>uint8</li>
+              <li>uint16</li>
+              <li>uint32</li>
+              <li>uint64</li>
+              <li>int</li>
+              <li>int8</li>
+              <li>int16</li>
+              <li>int32</li>
+              <li>int64</li>
+              <li>uintptr</li>
+              <li>float32</li>
+              <li>float64</li>
+            </ul>
+            Dan masih banyak lagi.. <br>
+            Berikut contoh pembuatan variabel serta tipe data .</p>
+            <pre>
+                <code>
+                  package main 
+
+                  import "fmt"
+
+                  func main() {
+                  var nama string = "Ucup"
+                  var umur int = 20
+                  
+                  fmt.Println("Nama saya", nama, "dan umur saya", umur)
+                  }
+                </code>
+              </pre>
+          </section>
+          <section id="go_const">
+            <h4>Penggunaan <code>Const</code></h4>
+            <p>Data seperti pi(22/7), kecepatan cahaya, adalah contoh data jika di deklarasikan sebagai konstanta
+              daripada variabel. karena nilainya sudah pasti <code>tidak dapat dirubah</code>. <br>
+              Contoh penggunaan Const : </p>
+            <pre>
+                <code>
+                  const pi = 22/7
+                  fmt.Println("Nilai pi adalah", pi)
+                </code>
+              </pre>
+            <p>Teknik type interface bisa di terapkan pada konstanta. dengan cara menghilangkan tipe data pada saat
+              deklarasi.</p>
+          </section>
+          <hr class="divider">
+          <section id="go_operator">
+            <h3>Operator</h3>
+            <p>
+              Operator adalah perintah yang digunakan untuk melakukan operasi pada data. <br>
+              Contoh operator yang dapat digunakan :
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tanda</th>
+                  <th>Penjelasan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">+</td>
+                  <td>Penjumlahan</td>
+                </tr>
+                <tr>
+                  <td scope="row">-</td>
+                  <td>Pengurangan</td>
+                </tr>
+                <tr>
+                  <td scope="row">*</td>
+                  <td>Perkalian</td>
+                </tr>
+                <tr>
+                  <td scope="row">/</td>
+                  <td>Pembagian</td>
+                </tr>
+                <tr>
+                  <td scope="row">%</td>
+                  <td>Modulus/sisa pembagian</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Contoh:<br>
+              <code>
+                var a = 10 <br>
+                var b = 5 <br>
+                var hasil = a + b <br>
+                fmt.Println("Hasil penjumlahan", hasil)
+              </code> <br>
+              Output : <br>
+              <code>
+                Hasil penjumlahan 15
+              </code>
+            </p>
+            <h4>Operator Perbandingan</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tanda</th>
+                  <th>Penjelasan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">==</td>
+                  <td>Pengecekan nilai sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">!=</td>
+                  <td>Pengecekan nilai tidak sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">&lt;</td>
+                  <td>Pengecekan nilai lebih kecil</td>
+                </tr>
+                <tr>
+                  <td scope="row">&gt;</td>
+                  <td>Pengecekan nilai lebih besar</td>
+                </tr>
+                <tr>
+                  <td scope="row">&lt;=</td>
+                  <td>Pengecekan nilai lebih kecil atau sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">&gt;=</td>
+                  <td>Pengecekan nilai lebih besar atau sama</td>
+                </tr>
+              </tbody>
+
+            </table>
+            <p>
+              Operator perbandingan : <br>
+              <code>
+                var a = 10 <br>
+                var b = 5 <br>
+                var hasil = a > b <br>
+                fmt.Println("Hasil perbandingan", hasil)
+              </code> <br>
+              Output : <br>
+              <code>
+                Hasil perbandingan false
+              </code>
+
+            </p>
+          </section>
+          <hr class="divider">
+          <section id="go_if">
+            <h3>Perintah If</h3>
+            <p>Seleksi kondisi digunakan untuk mengontrol alur program. Analoginya mirip seperti fungsi rambu lalu
+              lintas di jalan raya. Kapan kendaraan diperbolehkan melaju dan kapan harus berhenti diatur oleh rambu
+              tersebut. Seleksi kondisi pada program juga kurang lebih sama, kapan sebuah blok kode akan dieksekusi
+              dikontrol.</p>
+            <p>
+              Yang dijadikan acuan oleh seleksi kondisi adalah nilai bertipe bool, bisa berasal dari variabel, ataupun
+              hasil operasi perbandingan. Nilai tersebut menentukan blok kode mana yang akan dieksekusi.
+            </p>
+            <p><Strong>Go tidak mendukung seleksi kondisi menggunakan ternary.</Strong> <br> Seperti : <br>
+              <code>
+                var data = (isExist ? "ada" : "tidak ada") adalah invalid dan menghasilkan error.
+                </code>
+            </p>
+            <p>
+              Perintah if digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+              Contoh perintah if :
+            </p>
+            <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  }
+                </code>
+              </pre>
+            <p>
+              Output : <br>
+              <code>
+                a lebih besar dari b
+              </code>
+            </p>
+            <section id="go_if_else">
+              <h4>Perintah if else</h4>
+              <p>
+                Perintah if else digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Contoh perintah if else :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  } else {
+                    fmt.Println("a lebih kecil dari b")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a lebih besar dari b
+              </code>
+              </p>
+            </section>
+            <section id="go_if_else_if">
+              <h4>Perintah else if</h4>
+              <p>
+                Cara penerapan if-else if di Go sama seperti pada bahasa pemrograman lain. Yang membedakan hanya tanda
+                kurungnya (parentheses), di Go tidak perlu ditulis. <br>
+                Contoh perintah else if :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  var c = 10 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  } else if a == c {
+                    fmt.Println("a sama dengan c")
+                  } else {
+                    fmt.Println("a lebih kecil dari b")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a lebih besar dari b
+              </code>
+              </p>
+            </section>
+
+            <section id="go_switch">
+              <h3>Perintah Switch</h3>
+              <p>
+                Switch merupakan seleksi kondisi yang sifatnya fokus pada satu variabel, lalu kemudian di-cek nilainya.
+                <br> Contoh sederhananya seperti penentuan apakah nilai variabel x adalah: 1, 2, 3, atau lainnya.. <br>
+                Contoh perintah switch :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  switch a {
+                  case 10:
+                    fmt.Println("a sama dengan 10")
+                  case 5:
+                    fmt.Println("a sama dengan 5")
+                  default:
+                    fmt.Println("a tidak sama dengan 10 dan 5")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a sama dengan 10
+              </code>
+              </p>
+              <p>
+                Pada kode di atas, tidak ada kondisi atau case yang terpenuhi karena nilai variabel point tetap 6.
+                Ketika hal seperti ini terjadi, blok kondisi <code>default</code> dipanggil. Bisa dibilang bahwa
+                <code>default</code> merupakan <code>else</code> dalam sebuah <code>switch</code>.
+              </p>
+              <p>
+                Perlu diketahui, switch pada pemrograman Go memiliki perbedaan dibanding bahasa lain. Di Go, ketika
+                sebuah case terpenuhi, tidak akan dilanjutkan ke pengecekan case selanjutnya, meskipun tidak ada keyword
+                break di situ. Konsep ini berkebalikan dengan switch pada umumnya, yang ketika sebuah case terpenuhi,
+                maka akan tetap dilanjut mengecek case selanjutnya kecuali ada keyword <code>break</code>.
+              </p>
+            </section>
+          </section>
+          <hr class="divider">
+          <section id="go_loops">
+            <h2>Perulangan</h2>
+            <p>
+              Perulangan adalah proses mengulang-ulang eksekusi blok kode tanpa henti, selama kondisi yang dijadikan
+              acuan terpenuhi. Biasanya disiapkan variabel untuk iterasi atau variabel penanda kapan perulangan akan
+              diberhentikan. <br>
+            </p>
+            <p>
+              Di Go <strong>hanya for saja</strong>, tetapi meski demikian, kemampuannya merupakan gabungan
+              <code>for</code>,
+              <code>foreach</code>, dan <code>while</code> ibarat bahasa pemrograman lain. <br>
+              Contoh Perulangan :
+            </p>
+
+            <pre>
+              <code>
+                var i = 0 <br>
+                for i < 10 {
+                  fmt.Print(i)
+                  i++
+                }
+              </code>
+            </pre>
+            <p>
+              Output : <br>
+              <code>
+                0123456789
+              </code>
+            </p>
+            </section>
+
+            <section id="go_for_range">
+              <h4>Perulangan for range</h4>
+              <p>
+                Perulangan for range digunakan untuk mengiterasi sebuah slice, map, atau string. <br>
+                Contoh perulangan for range :
+              </p>
+              <pre>
+                <code>
+                  var a = []int{1, 2, 3, 4, 5} <br>
+                  for i, v := range a {
+                    fmt.Println(i, v)
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                0 1 <br>
+                </code>
+                <code>
+                1 2 <br>
+                </code>
+                <code>
+                2 3 <br>
+                </code>
+                <code>
+                3 4 <br>
+                </code>
+                <code>
+                4 5 <br>
+                </code>
+              </p>
+            </section>
+
+            <section id="go_for_without_arguments">
+              <h4>Perulangan for tanpa argumen</h4>
+              <p>
+                Perulangan for tanpa argumen digunakan untuk mengiterasi sebuah slice, map, atau string. <br>
+                Contoh perulangan for tanpa argumen :
+              </p>
+              <pre>
+                <code>
+                  var a = []int{1, 2, 3, 4, 5} <br>
+                  for {
+                    fmt.Println(a)
+                    break
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                [1 2 3 4 5]
+                </code>
+              </p>
+              <pre>
+                <code>
+                  var i int = 0
+                  for {
+                    fmt.Println("Angka :" i)
+                    i++
+
+                    if i == 5 {
+                      break
+                    }
+                  }
+                  </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code> Angka : 0 <br> </code>
+                <code> Angka : 1 <br> </code>
+                <code> Angka : 2 <br> </code>
+                <code> Angka : 3 <br> </code>
+                <code> Angka : 4 <br> </code>
+                <code> Angka : 5 <br> </code>
+            </section>
+
+        </div>
+      </div>
+    </div>
+    <!-- Content end -->
+
+    <!-- Footer
+  ============================ -->
+    <footer id="footer" class="section bg-dark footer-text-light">
+      <div class="container">
+        <ul class="social-icons social-icons-lg social-icons-muted justify-content-center mb-3">
+          <li><a data-toggle="tooltip" href="http://www.instagram.com/Irizkyw117" target="_blank" title=""
+              data-original-title="Irizkyw117"><i class="fab fa-instagram"></i></a></li>
+          <li class="social-icons-facebook"><a data-toggle="tooltip" href="http://www.facebook.com/IchwanRizkyWahyudin/"
+              target="_blank" title="Ichwan Rizky Wahyudin" data-original-title="Ichwan Rizky Wahyudin"><i
+                class="fab fa-facebook"></i></a></li>
+        </ul>
+        <p class="text-center">Copyright &copy; 2022 <a href="http://www.irizkyw.github.io">iBlog</a>. All Rights
+          Reserved.</p>
+        <p class="text-2 text-center mb-0">Design by HarnishDesign.</p>
+      </div>
+    </footer>
+    <!-- Footer end -->
+
+  </div>
+  <!-- Document Wrapper end -->
+
+  <!-- Back To Top -->
+  <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+      class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript
+============================ -->
+  <script src="../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Highlight JS -->
+  <script src="../assets/vendor/highlight.js/highlight.min.js"></script>
+  <!-- Easing -->
+  <script src="../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <!-- Magnific Popup -->
+  <script src="../assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+  <!-- Custom Script -->
+  <script src="../assets/js/theme.js"></script>
+</body>
+
+</html>
