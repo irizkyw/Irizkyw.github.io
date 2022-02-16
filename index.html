@@ -92,9 +92,15 @@
           </li>
           <li class="nav-item"><a class="nav-link active" href="#go_if">Pengkondisian If</a>
             <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#go_if_else">If Else</a></li>
-              <li class="nav-item"><a class="nav-link" href="#go_if_else_if">Else If</a></li>
-              <li class="nav-item"><a class="nav-link" href="#go_switch">Switch</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_if_else">Pengkodisian If Else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_if_else_if">Pengkodisian Else If</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_switch">Pengkodisian Switch</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link active" href="#go_loops">Looping (perulangan)</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#go_for_range">Looping range </a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_for_without_arguments">Looping Tanpa Argumen</a></li>
             </ul>
           </li>
         </ul>
@@ -113,14 +119,14 @@
             <div class="row">
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
-                  <li><strong>Version:</strong> 1.0</li>
+                  <li><strong>Version:</strong> 1.1</li>
                   <li><strong>Author:</strong> Ichwan Rizky Wahyudin</li>
                 </ul>
               </div>
               <div class="col-sm-6 col-lg-4">
                 <ul class="list-unstyled">
                   <li><strong class="font-weight-700">Created:</strong> 15 Februari, 2022</li>
-                  <li><strong>Update:</strong> -</li>
+                  <li><strong>Update:</strong> 16 Februari, 2022</li>
                 </ul>
               </div>
             </div>
@@ -535,6 +541,19 @@
           <hr class="divider">
           <section id="go_if">
             <h3>Perintah If</h3>
+            <p>Seleksi kondisi digunakan untuk mengontrol alur program. Analoginya mirip seperti fungsi rambu lalu
+              lintas di jalan raya. Kapan kendaraan diperbolehkan melaju dan kapan harus berhenti diatur oleh rambu
+              tersebut. Seleksi kondisi pada program juga kurang lebih sama, kapan sebuah blok kode akan dieksekusi
+              dikontrol.</p>
+            <p>
+              Yang dijadikan acuan oleh seleksi kondisi adalah nilai bertipe bool, bisa berasal dari variabel, ataupun
+              hasil operasi perbandingan. Nilai tersebut menentukan blok kode mana yang akan dieksekusi.
+            </p>
+            <p><Strong>Go tidak mendukung seleksi kondisi menggunakan ternary.</Strong> <br> Seperti : <br>
+              <code>
+                var data = (isExist ? "ada" : "tidak ada") adalah invalid dan menghasilkan error.
+                </code>
+            </p>
             <p>
               Perintah if digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
               Contoh perintah if :
@@ -581,7 +600,8 @@
             <section id="go_if_else_if">
               <h4>Perintah else if</h4>
               <p>
-                Perintah else if digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Cara penerapan if-else if di Go sama seperti pada bahasa pemrograman lain. Yang membedakan hanya tanda
+                kurungnya (parentheses), di Go tidak perlu ditulis. <br>
                 Contoh perintah else if :
               </p>
               <pre>
@@ -609,7 +629,8 @@
             <section id="go_switch">
               <h3>Perintah Switch</h3>
               <p>
-                Perintah switch digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Switch merupakan seleksi kondisi yang sifatnya fokus pada satu variabel, lalu kemudian di-cek nilainya.
+                <br> Contoh sederhananya seperti penentuan apakah nilai variabel x adalah: 1, 2, 3, atau lainnya.. <br>
                 Contoh perintah switch :
               </p>
               <pre>
@@ -631,11 +652,128 @@
                 a sama dengan 10
               </code>
               </p>
+              <p>
+                Pada kode di atas, tidak ada kondisi atau case yang terpenuhi karena nilai variabel point tetap 6.
+                Ketika hal seperti ini terjadi, blok kondisi <code>default</code> dipanggil. Bisa dibilang bahwa
+                <code>default</code> merupakan <code>else</code> dalam sebuah <code>switch</code>.
+              </p>
+              <p>
+                Perlu diketahui, switch pada pemrograman Go memiliki perbedaan dibanding bahasa lain. Di Go, ketika
+                sebuah case terpenuhi, tidak akan dilanjutkan ke pengecekan case selanjutnya, meskipun tidak ada keyword
+                break di situ. Konsep ini berkebalikan dengan switch pada umumnya, yang ketika sebuah case terpenuhi,
+                maka akan tetap dilanjut mengecek case selanjutnya kecuali ada keyword <code>break</code>.
+              </p>
             </section>
           </section>
           <hr class="divider">
+          <section id="go_loops">
+            <h2>Perulangan</h2>
+            <p>
+              Perulangan adalah proses mengulang-ulang eksekusi blok kode tanpa henti, selama kondisi yang dijadikan
+              acuan terpenuhi. Biasanya disiapkan variabel untuk iterasi atau variabel penanda kapan perulangan akan
+              diberhentikan. <br>
+            </p>
+            <p>
+              Di Go <strong>hanya for saja</strong>, tetapi meski demikian, kemampuannya merupakan gabungan
+              <code>for</code>,
+              <code>foreach</code>, dan <code>while</code> ibarat bahasa pemrograman lain. <br>
+              Contoh Perulangan :
+            </p>
 
-          <hr class="divider">
+            <pre>
+              <code>
+                var i = 0 <br>
+                for i < 10 {
+                  fmt.Print(i)
+                  i++
+                }
+              </code>
+            </pre>
+            <p>
+              Output : <br>
+              <code>
+                0123456789
+              </code>
+            </p>
+            </section>
+
+            <section id="go_for_range">
+              <h4>Perulangan for range</h4>
+              <p>
+                Perulangan for range digunakan untuk mengiterasi sebuah slice, map, atau string. <br>
+                Contoh perulangan for range :
+              </p>
+              <pre>
+                <code>
+                  var a = []int{1, 2, 3, 4, 5} <br>
+                  for i, v := range a {
+                    fmt.Println(i, v)
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                0 1 <br>
+                </code>
+                <code>
+                1 2 <br>
+                </code>
+                <code>
+                2 3 <br>
+                </code>
+                <code>
+                3 4 <br>
+                </code>
+                <code>
+                4 5 <br>
+                </code>
+              </p>
+            </section>
+
+            <section id="go_for_without_arguments">
+              <h4>Perulangan for tanpa argumen</h4>
+              <p>
+                Perulangan for tanpa argumen digunakan untuk mengiterasi sebuah slice, map, atau string. <br>
+                Contoh perulangan for tanpa argumen :
+              </p>
+              <pre>
+                <code>
+                  var a = []int{1, 2, 3, 4, 5} <br>
+                  for {
+                    fmt.Println(a)
+                    break
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                [1 2 3 4 5]
+                </code>
+              </p>
+              <pre>
+                <code>
+                  var i int = 0
+                  for {
+                    fmt.Println("Angka :" i)
+                    i++
+
+                    if i == 5 {
+                      break
+                    }
+                  }
+                  </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code> Angka : 0 <br> </code>
+                <code> Angka : 1 <br> </code>
+                <code> Angka : 2 <br> </code>
+                <code> Angka : 3 <br> </code>
+                <code> Angka : 4 <br> </code>
+                <code> Angka : 5 <br> </code>
+            </section>
 
         </div>
       </div>
