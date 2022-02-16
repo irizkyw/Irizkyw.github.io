@@ -88,20 +88,14 @@
               <li class="nav-item"><a class="nav-link" href="#go_pembahasan">Go Pembahasan</a></li>
             </ul>
           </li>
-          <li class="nav-item"><a class="nav-link active" href="#go_variabel">Variabel</a>
-            <ul class="nav flex-column">
-              <li class="nav-item"><a class="nav-link" href="#go_tipe_data">Tipe Data</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel var</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Variabel Underscore _</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel Menggunakan <code>new</code></a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Deklarasi Variabel Menggunakan <code>make</code></a>
-              </li>
-            </ul>
+          <li class="nav-item"><a class="nav-link active" href="#go_operator">Operator</a>
           </li>
-          <ul class="nav flex-column">
-            <li class="nav-item"><a class="nav-link" href="#v1-1">v1.1</a></li>
-            <li class="nav-item"><a class="nav-link" href="#v1-0">v1.0</a></li>
-          </ul>
+          <li class="nav-item"><a class="nav-link active" href="#go_if">Pengkondisian If</a>
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href="#go_if_else">If Else</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_if_else_if">Else If</a></li>
+              <li class="nav-item"><a class="nav-link" href="#go_switch">Switch</a></li>
+            </ul>
           </li>
         </ul>
       </div>
@@ -257,7 +251,7 @@
             <p>Untuk nama executable sendiri bisa diubah menggunakan flag -o. Contoh:
             <ul style="list-style: none;">
               <li><code>go build -o (nama-project)</code></li>
-              <li><code>go build -o nama-program.exe</code></li>
+              <li><code>go build -o main.exe</code></li>
             </ul>
             </p>
 
@@ -384,29 +378,30 @@
           <section id="go_tipe_data">
             <h4>Tipe data Variabel</h4>
             <p>Go memiliki aturan yang cukup rese atau ketat dalam hal penulisan variabel. Ketika deklarasi, tipe data
-              yang digunakan harus dituliskan juga. Istilah lain dari konsep ini bisa di sebut <strong>manifest typing</strong>. <br>
+              yang digunakan harus dituliskan juga. Istilah lain dari konsep ini bisa di sebut <strong>manifest
+                typing</strong>. <br>
               Tipe data yang dapat digunakan adalah:
-              <ul>
-                <li>string</li>
-                <li>integer</li>
-                <li>boolean</li>
-                <li>float</li>
-                <li>uint</li>
-                <li>uint8</li>
-                <li>uint16</li>
-                <li>uint32</li>
-                <li>uint64</li>
-                <li>int</li>
-                <li>int8</li>
-                <li>int16</li>
-                <li>int32</li>
-                <li>int64</li>
-                <li>uintptr</li>
-                <li>float32</li>
-                <li>float64</li>
-              </ul>
-              Dan masih banyak lagi..  <br>
-              Berikut contoh pembuatan variabel serta tipe data.</p>
+            <ul>
+              <li>string</li>
+              <li>integer</li>
+              <li>boolean</li>
+              <li>float</li>
+              <li>uint</li>
+              <li>uint8</li>
+              <li>uint16</li>
+              <li>uint32</li>
+              <li>uint64</li>
+              <li>int</li>
+              <li>int8</li>
+              <li>int16</li>
+              <li>int32</li>
+              <li>int64</li>
+              <li>uintptr</li>
+              <li>float32</li>
+              <li>float64</li>
+            </ul>
+            Dan masih banyak lagi.. <br>
+            Berikut contoh pembuatan variabel serta tipe data .</p>
             <pre>
                 <code>
                   package main 
@@ -422,6 +417,226 @@
                 </code>
               </pre>
           </section>
+          <section id="go_const">
+            <h4>Penggunaan <code>Const</code></h4>
+            <p>Data seperti pi(22/7), kecepatan cahaya, adalah contoh data jika di deklarasikan sebagai konstanta
+              daripada variabel. karena nilainya sudah pasti <code>tidak dapat dirubah</code>. <br>
+              Contoh penggunaan Const : </p>
+            <pre>
+                <code>
+                  const pi = 22/7
+                  fmt.Println("Nilai pi adalah", pi)
+                </code>
+              </pre>
+            <p>Teknik type interface bisa di terapkan pada konstanta. dengan cara menghilangkan tipe data pada saat
+              deklarasi.</p>
+          </section>
+          <hr class="divider">
+          <section id="go_operator">
+            <h3>Operator</h3>
+            <p>
+              Operator adalah perintah yang digunakan untuk melakukan operasi pada data. <br>
+              Contoh operator yang dapat digunakan :
+            </p>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tanda</th>
+                  <th>Penjelasan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">+</td>
+                  <td>Penjumlahan</td>
+                </tr>
+                <tr>
+                  <td scope="row">-</td>
+                  <td>Pengurangan</td>
+                </tr>
+                <tr>
+                  <td scope="row">*</td>
+                  <td>Perkalian</td>
+                </tr>
+                <tr>
+                  <td scope="row">/</td>
+                  <td>Pembagian</td>
+                </tr>
+                <tr>
+                  <td scope="row">%</td>
+                  <td>Modulus/sisa pembagian</td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Contoh:<br>
+              <code>
+                var a = 10 <br>
+                var b = 5 <br>
+                var hasil = a + b <br>
+                fmt.Println("Hasil penjumlahan", hasil)
+              </code> <br>
+              Output : <br>
+              <code>
+                Hasil penjumlahan 15
+              </code>
+            </p>
+            <h4>Operator Perbandingan</h4>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Tanda</th>
+                  <th>Penjelasan</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td scope="row">==</td>
+                  <td>Pengecekan nilai sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">!=</td>
+                  <td>Pengecekan nilai tidak sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">&lt;</td>
+                  <td>Pengecekan nilai lebih kecil</td>
+                </tr>
+                <tr>
+                  <td scope="row">&gt;</td>
+                  <td>Pengecekan nilai lebih besar</td>
+                </tr>
+                <tr>
+                  <td scope="row">&lt;=</td>
+                  <td>Pengecekan nilai lebih kecil atau sama</td>
+                </tr>
+                <tr>
+                  <td scope="row">&gt;=</td>
+                  <td>Pengecekan nilai lebih besar atau sama</td>
+                </tr>
+              </tbody>
+
+            </table>
+            <p>
+              Operator perbandingan : <br>
+              <code>
+                var a = 10 <br>
+                var b = 5 <br>
+                var hasil = a > b <br>
+                fmt.Println("Hasil perbandingan", hasil)
+              </code> <br>
+              Output : <br>
+              <code>
+                Hasil perbandingan false
+              </code>
+
+            </p>
+          </section>
+          <hr class="divider">
+          <section id="go_if">
+            <h3>Perintah If</h3>
+            <p>
+              Perintah if digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+              Contoh perintah if :
+            </p>
+            <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  }
+                </code>
+              </pre>
+            <p>
+              Output : <br>
+              <code>
+                a lebih besar dari b
+              </code>
+            </p>
+            <section id="go_if_else">
+              <h4>Perintah if else</h4>
+              <p>
+                Perintah if else digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Contoh perintah if else :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  } else {
+                    fmt.Println("a lebih kecil dari b")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a lebih besar dari b
+              </code>
+              </p>
+            </section>
+            <section id="go_if_else_if">
+              <h4>Perintah else if</h4>
+              <p>
+                Perintah else if digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Contoh perintah else if :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  var b = 5 <br>
+                  var c = 10 <br>
+                  if a > b {
+                    fmt.Println("a lebih besar dari b")
+                  } else if a == c {
+                    fmt.Println("a sama dengan c")
+                  } else {
+                    fmt.Println("a lebih kecil dari b")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a lebih besar dari b
+              </code>
+              </p>
+            </section>
+
+            <section id="go_switch">
+              <h3>Perintah Switch</h3>
+              <p>
+                Perintah switch digunakan untuk mengeksekusi perintah jika kondisi yang diberikan benar. <br>
+                Contoh perintah switch :
+              </p>
+              <pre>
+                <code>
+                  var a = 10 <br>
+                  switch a {
+                  case 10:
+                    fmt.Println("a sama dengan 10")
+                  case 5:
+                    fmt.Println("a sama dengan 5")
+                  default:
+                    fmt.Println("a tidak sama dengan 10 dan 5")
+                  }
+                </code>
+              </pre>
+              <p>
+                Output : <br>
+                <code>
+                a sama dengan 10
+              </code>
+              </p>
+            </section>
+          </section>
+          <hr class="divider">
+
+          <hr class="divider">
+
         </div>
       </div>
     </div>
