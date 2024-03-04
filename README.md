@@ -1,1 +1,0 @@
-# irizkyw.github.io
