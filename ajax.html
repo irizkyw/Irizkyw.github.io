@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Artikel Soekarno</title>
+
+    <style>
+        /* overall */
+        *{
+            overflow-x: hidden;
+            text-decoration: none;
+        }
+        h1,h2,h3,h4,h5,h6{
+            overflow-y: hidden;
+        }
+
+        /* sudevar */
+        .sidebar {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            padding: 10px 8px 10px 16px;
+            text-decoration: none;
+            color: #818181;
+            display: block;
+        }
+
+        /* main */
+        .main, footer {
+            margin-left: 200px;
+            padding: 20px;
+        }
+
+        .content p{
+            text-align: justify;
+            justify-content: space-between;
+        }
+
+        /* footer */
+        footer {
+            bottom: 0;
+            width: 90%;
+            background-color: #111;
+            color: #818181;
+        }
+        .footer-nav a{
+            text-decoration: none;
+            color: #818181;
+        }
+    </style>
+    
+  </head>
+  <body>
+    <!-- siderbar -->
+    <div class="sidebar">
+        <a href="#" class="text-center">
+            <img src="./Logo_FIF.png" alt="logo" style="width: 180px; object-fit: contain;">
+        </a>
+        <a href="./index.html">Home</a>
+        <a href="./article.html">Article</a>
+        <a href="./ajax.html" class="active">Ajax</a>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <!-- Header -->
+            <header class="d-flex p-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Ajax</h1>
+                        <p>Get response dari 
+                            <a href="https://equran.id/apidev/v2">Api E-Quran</a>
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <hr>
+            <!-- main content -->
+            <section class="content mt-3">
+                <form>
+                    <div class="mb-3">
+                        <label for="suratNumber" class="form-label">Nomor Surat Alquran</label>
+                        <input type="number" class="form-control" id="suratNumber" name="suratNumber" placeholder="Masukkan nomor surat">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+
+                <!-- response -->
+                <div class="row mt-3">
+                    <div class="col-md-12">
+                        <button class="btn btn-primary" id="response-collapse" type="button" data-bs-toggle="collapse" data-bs-target="#responseCollapse" aria-expanded="false" aria-controls="responseCollapse" style="width: 100%;">
+                            Response
+                        </button>
+                        <div class="collapse" id="responseCollapse">
+                            <div class="card card-body">
+                                <pre id="response"></pre>
+                            </div>
+                        </div>
+
+                        <div class="response-content mt-3">
+                            <label for="no-surat">Nomor Surat</label>
+                            <input type="text" id="no-surat" class="form-control" disabled>
+                            <label for="nama-surat">Nama Surat</label>
+                            <input type="text" id="nama-surat" class="form-control" disabled>
+
+                            <lab for="jumlah-surat">Jumlah Ayat</label>
+                            <input type="text" id="jumlah-surat" class="form-control" disabled>
+
+                            <label for="tempat-turun">Tempat Turun</label>
+                            <input type="text" id="tempat-turun" class="form-control" disabled>
+
+                            <label for="deskripsi">Deskripsi</label>
+                            <div id="deskripsi" class="form-control">
+                                <p>-</p>
+                            </div>
+
+                            <h4 class="mt-5">Ayat Alquran</h4>
+                            <div class="form-group" id="ayat">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- references -->
+            <section class="content mt-3">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Referensi</h4>
+                        <p>
+                            <ul>
+                                <li><a href="https://equran.id/surat/1">EQuran.id</a></li>
+                            </ul>
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="d-flex p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- created by Ichwan Rizky Wahyudin & link navbar -->
+                    <p class="text-center">Created by Ichwan Rizky Wahyudin</p>
+
+                    <div class="footer-nav text-center">
+                        <a href="./index.html">Home</a>
+                        <a href="./article.html">Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- ajax -->
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function(e){
+                e.preventDefault();
+                var suratNumber = $("#suratNumber").val();
+                if (suratNumber.trim() !== "") {
+                    $.ajax({
+                        url: "https://equran.id/api/v2/surat/"+suratNumber,
+                        type: "GET",
+                        success: function(result){
+                            console.log(result);
+                            $("#response").text(JSON.stringify(result, null, 2));
+                            $("#response-collapse").removeClass("btn-danger").addClass("btn-success").text("Response: Success (Open Me!)");
+
+                            $("#no-surat").val(result.data.nomor);
+                            $("#nama-surat").val(result.data.namaLatin);
+                            $("#jumlah-surat").val(result.data.ayat.length);
+                            $("#tempat-turun").val(result.data.tempatTurun);
+                            $("#deskripsi").empty().append(result.data.deskripsi);
+                            $("#ayat").empty(); // Clear the existing content
+
+                            if (result && result.data.ayat && Array.isArray(result.data.ayat)) {
+                                for (let i = 0; i < result.data.ayat.length; i++) {
+                                    $("#ayat").append(`
+                                        <div class="form-group">
+                                            <label class="mt-3" for="ayat-${i+1}">Ayat ${i+1}</label>
+                                            <div id="teksArab-${i+1}" class="form-control" style="text-align: right; direction: rtl; font-size: 20px; font-family: 'Amiri', serif;">
+                                                ${result.data.ayat[i].teksArab}
+                                            </div>
+                                            <p id="teksLatin-${i+1}" class="form-control" style="text-align: left; font-size: 20px; font-family: 'Amiri', serif;">
+                                                ${result.data.ayat[i].teksLatin}<br>
+                                                ${result.data.ayat[i].teksIndonesia}
+
+                                            </p>
+                                        </div>
+                                    `);
+                                }
+                            } else {
+                                console.error('Unexpected structure for result:', result);
+                            }
+                        },
+                        error: function(){
+                            $("#response").text("Nomor surat tidak boleh kosong");
+                            $("#response-collapse").text("Response: Failure").css("color", "red");
+                        }
+                    });
+                } else {
+                    $("#response").text("Nomor surat tidak boleh kosong");
+                    $("#response-collapse").removeClass("btn-primary").addClass("btn-danger").text("Response: Failure (Ops!)");
+                }
+            });
+        });
+    </script>
+  </body>
+</html>
